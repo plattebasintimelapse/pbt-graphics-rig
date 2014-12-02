@@ -95,7 +95,6 @@ module.exports = function (grunt) {
             }
         },
 
-        // Empties folders to start fresh
         clean: {
             dist: {
                 files: [{
@@ -304,7 +303,6 @@ module.exports = function (grunt) {
             dist: [
                 'sass',
                 'copy:styles',
-                'imagemin',
                 'svgmin'
             ]
         },
