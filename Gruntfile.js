@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
         config: config,
         aws: grunt.file.readJSON("secrets.json"),
-        app: grunt.file.readJSON('app_config.json'),
+        app: grunt.file.readJSON('app.json'),
 
         watch: {
             bower: {
@@ -174,7 +174,6 @@ module.exports = function (grunt) {
                     src: [
                         '<%= config.dist %>/scripts/{,*/}*.js',
                         '<%= config.dist %>/styles/{,*/}*.css',
-                        '<%= config.dist %>/images/{,*/}*.*',
                         '<%= config.dist %>/styles/fonts/{,*/}*.*',
                         '<%= config.dist %>/*.{ico,png}'
                     ]

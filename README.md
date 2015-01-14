@@ -16,7 +16,7 @@ This app template spits out flat HTML, CSS, JS files to the PBT Amazon S3 accoun
 
 ##### Also needed
 * A copy of secrets.json (or environment variables)
-* Create app_config.json file, or edit existing
+* Create app.json file, or edit existing
 
 By Steven Speicher, November 2014
 
@@ -71,6 +71,6 @@ The ID should be the ID you created above with your `div`. The URL will look som
 
 	http://projects.plattebasintimelapse.com/assets/static/pages/example/index.html
 
-`example` would be the folder or production location you deployed your graphic. (HINT: The same as the PRODUCTION variable in the app_config.json file.)
+`example` would be the folder or production location you deployed your graphic. (HINT: The same as the PRODUCTION variable in the app.json file.)
 
 Save the CMS story and visit your site live!
