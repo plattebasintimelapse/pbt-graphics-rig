@@ -15,7 +15,7 @@ module.exports = function (grunt) {
 
         config: config,
         aws: grunt.file.readJSON("secrets.json"),
-        app: grunt.file.readJSON('app.json'),
+        app: grunt.file.readJSON('app_config.json'),
 
         watch: {
             bower: {
@@ -188,7 +188,6 @@ module.exports = function (grunt) {
             html: '<%= config.app %>/index.html'
         },
 
-        // Performs rewrites based on rev and the useminPrepare configuration
         usemin: {
             options: {
                 assetsDirs: ['<%= config.dist %>', '<%= config.dist %>/images']
@@ -197,7 +196,6 @@ module.exports = function (grunt) {
             css: ['<%= config.dist %>/styles/{,*/}*.css']
         },
 
-        // The following *-min tasks produce minified files in the dist folder
         imagemin: {
             dist: {
                 files: [{
@@ -262,8 +260,9 @@ module.exports = function (grunt) {
                     flatten: true,
                     cwd: '.',
                     dest: '<%= config.dist %>/fonts',
-                    src: ['bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*',
-                        'bower_components/fontawesome/fonts/{,*/}*.*'
+                    src: [
+                        'bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/*.*',
+                        'bower_components/font-awesome/fonts/{,*/}*.*'
                     ]
                 }]
             },
@@ -310,7 +309,7 @@ module.exports = function (grunt) {
             options: {
                 accessKeyId: '<%= aws.accessKeyId %>',
                 secretAccessKey: '<%= aws.secretAccessKey %>',
-                region: 'us-west-2',
+                region: '<%= aws.region %>',
                 uploadConcurrency: 5
             },
             production: {
