@@ -2,14 +2,16 @@
 
 $(function() {
 
-  function drawGraphic() {
+  	function drawGraphic() {
 
-    // clear existing graphic
-    // $('#chart svg').remove();
-  };
+	    // clear existing graphic
+	    // $('#chart svg').remove();
+  	};
 
-  var pymChild = new pym.Child({ renderCallback: drawGraphic });
+  	var pymChild = new pym.Child({ renderCallback: drawGraphic });
 
-  d3.select(window).on('resize', drawGraphic);
+  	$(window).resize(function() {
+  		drawGraphic()
+  	});
 
 });
