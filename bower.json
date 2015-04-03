@@ -1,5 +1,5 @@
 {
-  "name": "lincoln-water-chart",
+  "name": "pbt-graphics-rig",
   "private": true,
   "dependencies": {
     "bootstrap-sass-official": "~3.1.0",
